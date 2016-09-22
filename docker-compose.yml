@@ -1,0 +1,25 @@
+sparkmaster:
+  image: birgerk/apache-spark
+  ports:
+    - 4040:4040
+    - 8080:8080
+  environment:
+    SPARK_ROLE: master
+
+sparkslave1:
+  image: birgerk/apache-spark
+  entrypoint: dockerize -wait tcp://sparkmaster:7077 -timeout 240s /sbin/my_init
+  links:
+    - sparkmaster
+  environment:
+    SPARK_MASTER: sparkmaster
+    SPARK_ROLE: slave
+
+sparkslave2:
+  image: birgerk/apache-spark
+  entrypoint: dockerize -wait tcp://sparkmaster:7077 -timeout 240s /sbin/my_init
+  links:
+    - sparkmaster
+  environment:
+    SPARK_MASTER: sparkmaster
+    SPARK_ROLE: slave
