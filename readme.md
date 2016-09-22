@@ -1,5 +1,5 @@
 # Apache Spark as Docker-Container
-In the `demo/startDemo.sh` you can see an example use of this image in master-slave-mode.
+In the `docker-compose.yml` you can see an example use of this image in master-slave-mode.
 
 ## Running Custom Code
 There are 2 types of spark-container: master and slave.
