@@ -9,7 +9,7 @@ ENV HADOOP_VERSION 2.7
 ENV SPARK_MASTER_PORT 7077
 ENV DOCKERIZE_VERSION v0.2.0
 
-RUN apt-get update && apt-get install -y openjdk-8-jdk autossh && \
+RUN apt-get update && apt-get install -y openjdk-8-jdk autossh build-essential python-dev  python-pip python-setuptools && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
