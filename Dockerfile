@@ -26,6 +26,7 @@ RUN curl -L -O https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE
 
 # install R packages
 RUN R CMD javareconf \
+    && R -e "install.packages('shiny', repos = 'http://cran.us.r-project.org', dependencies=T)" \
     && R -e "install.packages('devtools', repos = 'http://cran.us.r-project.org', dependencies=T)" \
     && R -e "install.packages('knitr', repos = 'http://cran.us.r-project.org', dependencies=T)" \
     && R -e "install.packages('ggplot2', repos = 'http://cran.us.r-project.org', dependencies=T)" \
