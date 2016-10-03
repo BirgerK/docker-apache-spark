@@ -1,7 +1,7 @@
 # Apache Spark as Docker-Container
 In the `docker-compose.yml` you can see an example use of this image in master-slave-mode.
 
-This image supports the usage of Java8,Python3 and R.
+This image supports the usage of Java8 and Python3
 
 ## Running Custom Code
 There are 2 types of spark-container: master and slave.
