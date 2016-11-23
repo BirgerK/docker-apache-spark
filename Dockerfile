@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.9.19
 MAINTAINER BirgerK <birger.kamp@gmail.com>
 
-ENV SPARK_VERSION 2.0.0
+ENV SPARK_VERSION 2.0.2
 ENV SPARK_INSTALL /usr/local
 ENV SPARK_HOME $SPARK_INSTALL/spark
 ENV SPARK_ROLE master
@@ -15,7 +15,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# install dockerize
+##### INSTALL DOCKERIZE
 RUN curl -L -O https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
     tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
     rm -rf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
