@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.9.19
 MAINTAINER BirgerK <birger.kamp@gmail.com>
 
-ENV SPARK_VERSION 2.0.2
+ENV SPARK_VERSION 2.0.0
 ENV SPARK_INSTALL /usr/local
 ENV SPARK_HOME $SPARK_INSTALL/spark
 ENV SPARK_ROLE master
