@@ -10,6 +10,8 @@ sparkmaster:
 sparkslave1:
   image: birgerk/apache-spark
   entrypoint: dockerize -wait tcp://sparkmaster:7077 -timeout 240s /sbin/my_init
+  ports:
+    - 8081:8081
   links:
     - sparkmaster
   environment:
@@ -19,6 +21,8 @@ sparkslave1:
 sparkslave2:
   image: birgerk/apache-spark
   entrypoint: dockerize -wait tcp://sparkmaster:7077 -timeout 240s /sbin/my_init
+  ports:
+    - 8091:8081
   links:
     - sparkmaster
   environment:
