@@ -33,7 +33,7 @@ RUN curl -o /usr/local/spark/jars/dropwizard-metrics-influxdb-1.2.2.jar http://c
 
 WORKDIR $SPARK_HOME
 
-##### ADD Scripts
+##### ADD Scriptss
 RUN mkdir /etc/service/spark
 ADD runit/spark.sh /etc/service/spark/run
 RUN chmod +x /etc/service/**/*
