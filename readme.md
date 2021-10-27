@@ -1,3 +1,6 @@
+# DEPRECATED
+*I'm not updating this repo anymore*
+
 # Apache Spark as Docker-Container
 In the `docker-compose.yml` you can see an example use of this image in master-slave-mode.
 
